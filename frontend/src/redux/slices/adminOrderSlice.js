@@ -9,7 +9,7 @@ export const fetchAdminOrders = createAsyncThunk("adminOrders/fetchAdminOrders",
     async (_, { rejectWithValue }) => {
         try {
             const response = await axios.get(
-                `${API_URL}api/admin/orders`,
+                `${API_URL}/api/admin/orders`,
                 {
                     headers: {
                         Authorization: USER_TOKEN,
@@ -29,7 +29,7 @@ export const updateOrderStatus = createAsyncThunk("adminOrders/updateOrderStatus
     async ({ id, status }, { rejectWithValue }) => {
         try {
             const response = await axios.put(
-                `${API_URL}api/admin/orders/${id}`,
+                `${API_URL}/api/admin/orders/${id}`,
                 { status },
                 {
                     headers: {
@@ -50,7 +50,7 @@ export const deleteOrder = createAsyncThunk("adminOrders/deleteOrder",
     async (id, { rejectWithValue }) => {
         try {
             await axios.delete(
-                `${API_URL}api/admin/orders/${id}`,
+                `${API_URL}/api/admin/orders/${id}`,
                 {
                     headers: {
                         Authorization: USER_TOKEN,

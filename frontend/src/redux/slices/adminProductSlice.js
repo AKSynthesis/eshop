@@ -9,7 +9,7 @@ export const fetchAdminProducts = createAsyncThunk("adminProducts/fetchAdminProd
     async (_, { rejectWithValue }) => {
         try {
             const response = await axios.get(
-                `${API_URL}api/admin/products`,
+                `${API_URL}/api/admin/products`,
                 {
                     headers: {
                         Authorization: USER_TOKEN,
@@ -29,7 +29,7 @@ export const createProduct = createAsyncThunk("adminProducts/createProduct",
     async (productData, { rejectWithValue }) => {
         try {
             const response = await axios.post(
-                `${API_URL}api/admin/products`,
+                `${API_URL}/api/admin/products`,
                 productData,
                 {
                     headers: {
@@ -50,7 +50,7 @@ export const updateProduct = createAsyncThunk("adminProducts/updateProduct",
     async ({ id, productData }, { rejectWithValue }) => {
         try {
             const response = await axios.put(
-                `${API_URL}api/admin/products/${id}`,
+                `${API_URL}/api/admin/products/${id}`,
                 productData,
                 {
                     headers: {
@@ -71,7 +71,7 @@ export const deleteProduct = createAsyncThunk("adminProducts/deleteProduct",
     async (id, { rejectWithValue }) => {
         try {
             await axios.delete(
-                `${API_URL}api/products/${id}`,
+                `${API_URL}/api/products/${id}`,
                 {
                     headers: {
                         Authorization: USER_TOKEN,
