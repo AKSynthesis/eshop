@@ -1,7 +1,7 @@
 import { IoLogoInstagram } from "react-icons/io";
 import { RiTwitterXLine } from "react-icons/ri";
 import { TbBrandMeta } from "react-icons/tb";
-import { FiPhoneCall } from "react-icons/fi"
+import { FiPhoneCall } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -103,7 +103,7 @@ function Footer() {
 
       {/* Footer Bottom */}
       <div className="container mx-auto mt-12 px-4 lg:px-0 border-t border-gray-200 pt-6">
-        <p className="text-gray-500 text-sm tracking-tighter text-center">© 2025, CompileTab. All Rights Reserved.</p>
+        <p className="text-gray-500 text-sm tracking-tighter text-center">© 2025, Imposter. All Rights Reserved.</p>
       </div>
     </footer>
   );
